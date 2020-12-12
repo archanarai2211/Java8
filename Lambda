@@ -1,0 +1,16 @@
+Anonymous class definition:
+
+//Old Style
+FileFilter f = new FileFilter(){
+
+@Override
+public boolean accept(File file){
+  return file.getName().endsWith(".java");
+}
+
+}
+
+//with lambda
+
+FileFilter f = (File file) -> file.getName().endsWith(".java");
+              //parameter followed by return value
